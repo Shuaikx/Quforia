@@ -4,6 +4,11 @@
   "displayName": "Quforia - Vuforia Driver for Meta Quest",
   "description": "Bridges Vuforia's External Camera Driver Framework with Meta Quest's Passthrough Camera, enabling Vuforia image tracking on Quest devices.",
   "unity": "2022.3",
+  "dependencies": {
+    "com.ptc.vuforia.engine": "11.4.4",
+    "com.meta.xr.sdk.core": "81.0.0",
+    "com.meta.xr.mrutilitykit": "81.0.0"
+  },
   "author": {
     "name": "Shuaikx"
   },
@@ -17,12 +22,12 @@
   ],
   "samples": [
     {
-      "displayName": "Demo Models",
+      "displayName": "Assets",
       "description": "Sample 3D models, animations, materials and textures.",
       "path": "Samples~/Models"
     },
     {
-      "displayName": "Demo Scenes",
+      "displayName": "Scenes",
       "description": "Sample scenes demonstrating Vuforia image tracking on Quest.",
       "path": "Samples~/Scenes"
     }
