@@ -2,7 +2,9 @@
   "name": "Quforia",
   "rootNamespace": "",
   "references": [
-    "Vuforia.Core"
+    "Vuforia.Core",
+    "Oculus.VR",
+    "meta.xr.mrutilitykit"
   ],
   "includePlatforms": [
     "Android",
