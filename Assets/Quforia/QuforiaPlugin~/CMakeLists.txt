@@ -22,9 +22,12 @@ add_library(quforia SHARED
 )
 
 # Link libraries
+# Note: NDK r27+ requires explicit C++ static library linking
 target_link_libraries(quforia
     android
     log
+    c++_static
+    c++abi
 )
 
 # Compiler flags
