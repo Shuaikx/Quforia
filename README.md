@@ -50,8 +50,8 @@ Quforia depends on a native Android plugin (`libquforia.so`). You need to add it
 ### Step 3 — Configure Vuforia License Key
 
 1. Get a License Key from the [Vuforia Developer Portal](https://developer.vuforia.com/home) (free tier works)
-2. Create a file named `VuforiaLicenseKey.txt` in your project's `Assets/StreamingAssets/` directory
-3. Paste your License Key into that file
+2. In Unity, select any GameObject with a **Vuforia Behaviour** component and click **Open Vuforia Engine configuration**
+3. In the **Vuforia Configuration** inspector, paste your License Key into the **App License Key** field
 
 ### Step 4 — Configure AndroidManifest
 
@@ -134,7 +134,7 @@ Quest Passthrough Camera
 If you need to modify the native plugin:
 
 ```bash
-cd QuforiaPlugin
+cd Assets/Quforia/QuforiaPlugin~
 ./build.sh
 ```
 
@@ -143,27 +143,26 @@ The built `libquforia.so` will be output to `Assets/Plugins/Android/libs/arm64-v
 ## Project Structure
 
 ```
-Assets/Quforia/              # UPM package
-├── package.json              # Package manifest
+Assets/Quforia/                    # UPM package
+├── package.json                    # Package manifest
 ├── Scripts/
-│   ├── Quforia.asmdef        # Assembly definition
+│   ├── Quforia.asmdef              # Assembly definition
 │   ├── QuestVuforiaDriverInit.cs   # Driver initialization
 │   ├── MetaCameraProvider.cs       # Quest camera frame capture
 │   ├── QuestVuforiaBridge.cs       # P/Invoke bridge
 │   └── VuforiaKeyLoader.cs         # License Key loader
-└── Samples~/
-    ├── Models/               # Sample models & animations
-    └── Scenes/               # Sample scenes
+├── Samples~/
+│   ├── Models/                     # Sample models & animations
+│   └── Scenes/                     # Sample scenes
+└── QuforiaPlugin~/                 # C++ native plugin source (hidden from Unity)
+    ├── src/
+    ├── include/
+    ├── CMakeLists.txt
+    └── build.sh
 
-Assets/Plugins/Android/       # Native plugin
+Assets/Plugins/Android/             # Native plugin binary
 └── libs/arm64-v8a/
     └── libquforia.so
-
-QuforiaPlugin/                # C++ native plugin source
-├── src/
-├── include/
-├── CMakeLists.txt
-└── build.sh
 ```
 
 ## Contributing

@@ -50,8 +50,8 @@ Quforia 依赖一个原生 Android 插件 (`libquforia.so`)。你需要手动将
 ### 步骤 3 — 配置 Vuforia License Key
 
 1. 前往 [Vuforia 开发者门户](https://developer.vuforia.com/home) 获取一个 License Key（免费版即可）
-2. 在你项目的 `Assets/StreamingAssets/` 目录下创建一个名为 `VuforiaLicenseKey.txt` 的文件
-3. 将 License Key 粘贴到该文件中
+2. 在 Unity 中，选中任意挂有 **Vuforia Behaviour** 组件的 GameObject，点击 **Open Vuforia Engine configuration**
+3. 在打开的 **Vuforia Configuration** 面板中，将 License Key 粘贴到 **App License Key** 字段中
 
 ### 步骤 4 — 配置 AndroidManifest
 
@@ -134,7 +134,7 @@ Quest Passthrough Camera
 如果你需要修改原生插件：
 
 ```bash
-cd QuforiaPlugin
+cd Assets/Quforia/QuforiaPlugin~
 ./build.sh
 ```
 
@@ -143,27 +143,26 @@ cd QuforiaPlugin
 ## 项目结构
 
 ```
-Assets/Quforia/              # UPM 包
-├── package.json              # 包描述文件
+Assets/Quforia/                    # UPM 包
+├── package.json                    # 包描述文件
 ├── Scripts/
-│   ├── Quforia.asmdef        # 程序集定义
+│   ├── Quforia.asmdef              # 程序集定义
 │   ├── QuestVuforiaDriverInit.cs   # 驱动初始化
 │   ├── MetaCameraProvider.cs       # Quest 摄像头画面获取
 │   ├── QuestVuforiaBridge.cs       # P/Invoke 桥接
 │   └── VuforiaKeyLoader.cs         # License Key 加载
-└── Samples~/
-    ├── Models/               # 示例模型和动画
-    └── Scenes/               # 示例场景
+├── Samples~/
+│   ├── Models/                     # 示例模型和动画
+│   └── Scenes/                     # 示例场景
+└── QuforiaPlugin~/                 # C++ 原生插件源码（Unity 不可见）
+    ├── src/
+    ├── include/
+    ├── CMakeLists.txt
+    └── build.sh
 
-Assets/Plugins/Android/       # 原生插件
+Assets/Plugins/Android/             # 原生插件二进制
 └── libs/arm64-v8a/
     └── libquforia.so
-
-QuforiaPlugin/                # C++ 原生插件源码
-├── src/
-├── include/
-├── CMakeLists.txt
-└── build.sh
 ```
 
 ## Contributing

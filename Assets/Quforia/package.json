@@ -22,14 +22,9 @@
   ],
   "samples": [
     {
-      "displayName": "Assets",
-      "description": "Sample 3D models, animations, materials and textures.",
-      "path": "Samples~/Models"
-    },
-    {
-      "displayName": "Scenes",
-      "description": "Sample scenes demonstrating Vuforia image tracking on Quest.",
-      "path": "Samples~/Scenes"
+      "displayName": "Demo for Quforia",
+      "description": "A sample scene demonstrating the capabilities of Quforia, showcasing Vuforia image tracking using Meta Quest's Passthrough Camera.",
+      "path": "Samples~/Demo"
     }
   ]
 }
