@@ -29,6 +29,17 @@
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       }
     },
+    "com.shuaikx.quforia": {
+      "version": "https://github.com/Shuaikx/Quforia.git?path=Assets/Quforia",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.ptc.vuforia.engine": "11.4.4",
+        "com.meta.xr.sdk.core": "81.0.0",
+        "com.meta.xr.mrutilitykit": "81.0.0"
+      },
+      "hash": "583aeb379ecfec71261b03e6857dbf2a35bbe8e8"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.9",
       "depth": 0,
