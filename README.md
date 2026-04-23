@@ -6,7 +6,7 @@
 
 Quforia enables Vuforia Engine's image tracking capabilities on Meta Quest devices. It feeds Quest's Passthrough camera frames to Vuforia through a custom C++ native plugin, enabling AR image recognition and tracking.
 
-![Demo](/Media/image-target-demo.gif)
+![Demo](/Media/Quforia_sample.gif)
 
 ## Installation
 

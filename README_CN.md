@@ -6,7 +6,7 @@
 
 Quforia 让 Vuforia Engine 的图像追踪能力在 Meta Quest 设备上运行。它通过一个自定义的 C++ 原生插件，将 Quest 的 Passthrough 摄像头画面喂给 Vuforia，从而实现 AR 图像识别和追踪。
 
-![Demo](/Media/image-target-demo.gif)
+![Demo](/Media/Quforia_sample.gif)
 
 ## 安装
 
